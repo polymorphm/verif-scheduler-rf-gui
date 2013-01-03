@@ -9,7 +9,7 @@ Used GUI special for users of Russian Federation.
 Branch status
 -------------
 
-Development branch.
+Beta branch.
 
 Compiling for Win32
 -------------------
