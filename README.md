@@ -18,6 +18,8 @@ Using cx_Freeze like:
 
     $ cxfreeze \
             --base-name=Win32GUI \
-            --target-name=verif-scheduler-rf-gui \
+            --target-name=verif-scheduler-rf-gui.exe \
             --include-path=verif-scheduler \
             start_verif_scheduler_rf_gui_2013_01_02.py
+    $ git rev-list HEAD^.. > dist/VERSION.txt
+
