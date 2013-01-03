@@ -46,7 +46,7 @@ class AboutWindow:
         self._tk_mt = tk_mt.TkMt(self._root)
         self._root.protocol("WM_DELETE_WINDOW", self.close)
         
-        self._root.title(string='О Программе "Планирование проверок"')
+        self._root.title(string='О Программе "Планирование поверок"')
         
         self._text = scrolledtext.ScrolledText(master=self._root)
         self._text.insert(tkinter.END, ABOUT_TEXT)

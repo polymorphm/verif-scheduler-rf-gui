@@ -159,7 +159,7 @@ class MainWindow:
         self._root.protocol("WM_DELETE_WINDOW", self.close)
         self._root_frame = ttk.Frame(master=self._root)
         
-        self._root.title(string='Планирование проверок')
+        self._root.title(string='Планирование поверок')
         self._root.geometry('{}x{}'.format(
                 DEFAULT_MAIN_WINDOW_WIDTH, DEFAULT_MAIN_WINDOW_HEIGHT))
         
@@ -278,10 +278,10 @@ class MainWindow:
                 text='Дата окончания периода (не включая этот день):')
         self._end_date_entry = ttk.Entry(master=self._data_tab_frame)
         self._verif_count_label = ttk.Label(master=self._data_tab_frame,
-                text='Количество проверок (Количество приборов):')
+                text='Количество поверок (Количество приборов):')
         self._verif_count_entry = ttk.Entry(master=self._data_tab_frame)
         self._week_days_label = ttk.Label(master=self._data_tab_frame,
-                text='Дни недели проверок:')
+                text='Дни недели поверок:')
         self._week_days_widget = WeekDaysWidget(self._data_tab_frame)
         
         self._begin_date_label.pack(padx=10, pady=10)
@@ -352,8 +352,8 @@ class MainWindow:
     def _set_calc_data(self):
         data_str = 'Дата начала периода: {}\n\n' \
                 'Дата окончания периода (не включая этот день): {}\n\n' \
-                'Количество проверок (Количество приборов): {}\n\n' \
-                'Дни недели проверок: {}\n\n' \
+                'Количество поверок (Количество приборов): {}\n\n' \
+                'Дни недели поверок: {}\n\n' \
                 'Исключения: {}\n\n'.format(
                         self._data.begin_date,
                         self._data.end_date,
@@ -385,7 +385,7 @@ class MainWindow:
         if not self._data.end_date:
             raise UserError('необходимо ввести дату конца периода')
         if not self._data.verif_count:
-            raise UserError('необходимо ввести количество проверок')
+            raise UserError('необходимо ввести количество поверок')
         if not self._data.week_days:
             raise UserError('необходимо указать хотя бы какой-нибудь день недели')
         
@@ -396,7 +396,7 @@ class MainWindow:
         calc_params.excl_list = tuple(get_date_list(self._data.excl))
         
         if calc_params.verif_count <= 0:
-            raise UserError('количество проверок должно быть больше нуля')
+            raise UserError('количество поверок должно быть больше нуля')
         
         return calc_params
     
