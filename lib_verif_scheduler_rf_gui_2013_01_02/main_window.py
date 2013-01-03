@@ -23,10 +23,9 @@ import threading
 from tkinter import ttk, scrolledtext
 from . import tk_mt
 from . import about_window
-from . import lib_verif_scheduler
-date_parser = lib_verif_scheduler.import_module('date_parser')
-excl_file = lib_verif_scheduler.import_module('excl_file')
-verif_scheduler = lib_verif_scheduler.import_module('verif_scheduler')
+from .lib_verif_scheduler import date_parser
+from .lib_verif_scheduler import excl_file
+from .lib_verif_scheduler import verif_scheduler
 
 DATA_STATE=object()
 CALC_STATE=object()

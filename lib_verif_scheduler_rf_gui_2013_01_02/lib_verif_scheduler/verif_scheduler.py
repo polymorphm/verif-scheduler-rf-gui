@@ -17,9 +17,4 @@
 
 assert str is not bytes
 
-import importlib
-
-LIB_PACKAGE_NAME = 'lib_verif_scheduler_2012_12_25'
-
-import_module = lambda module_name: \
-        importlib.import_module('.'.join((LIB_PACKAGE_NAME, module_name)))
+from lib_verif_scheduler_2012_12_25.verif_scheduler import *

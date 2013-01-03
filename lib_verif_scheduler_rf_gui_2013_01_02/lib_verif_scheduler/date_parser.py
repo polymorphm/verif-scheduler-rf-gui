@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- mode: python; coding: utf-8 -*-
 #
 # Copyright 2013 Andrej A Antonov <polymorphm@gmail.com>.
@@ -10,18 +9,12 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU Lesser General Public License for more details.
 #
 # You should have received a copy of the GNU Lesser General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 assert str is not bytes
 
-# pre-import for cxfreeze
-import re
-
-from lib_verif_scheduler_rf_gui_2013_01_02.main import main
-
-if __name__ == '__main__':
-    main()
+from lib_verif_scheduler_2012_12_25.date_parser import *

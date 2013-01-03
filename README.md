@@ -10,3 +10,13 @@ Branch status
 -------------
 
 Development branch.
+
+Compiling for Win32
+-------------------
+
+Using cx_Freeze like:
+
+    $ PYTHONPATH=verif-scheduler cxfreeze \
+            --base-name=Win32GUI \
+            --target-name=verif-scheduler-rf-gui \
+            start_verif_scheduler_rf_gui_2013_01_02.py
