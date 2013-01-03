@@ -60,8 +60,8 @@ class AboutWindow:
                 command=self.close)
         
         self._text.pack(fill=tkinter.BOTH, expand=True)
-        self._web_button.pack()
-        self._close_button.pack()
+        self._web_button.pack(side=tkinter.LEFT, padx=10, pady=10)
+        self._close_button.pack(side=tkinter.RIGHT, padx=10, pady=10)
     
     def close(self):
         self._tk_mt.push_destroy()
