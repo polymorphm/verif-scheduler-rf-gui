@@ -17,12 +17,12 @@
 
 assert str is not bytes
 
-import subprocess
+import webbrowser
 import tkinter
 from tkinter import ttk, scrolledtext
 from . import tk_mt
 
-WEB_PAGE = 'https://github.com/verif-scheduler-2012-12-25'
+WEB_PAGE_URL = 'https://github.com/verif-scheduler-2012-12-25'
 
 ABOUT_TEXT = """\
 Copyright 2012, 2013 Andrej A Antonov <polymorphm@gmail.com>.
@@ -68,6 +68,6 @@ class AboutWindow:
     
     def _open_web_page(self):
         def thread_target():
-            subprocess.call(('xdg-open', WEB_PAGE))
+            webbrowser.open(WEB_PAGE_URL)
         
         self._tk_mt.start_daemon(thread_target)
